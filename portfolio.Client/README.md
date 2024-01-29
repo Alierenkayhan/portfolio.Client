@@ -1,0 +1,1 @@
+This is a template. I took it from here https://github.com/paytonjewell/ReactPortfolioTemplate?tab=readme-ov-file and made certain corrections, for example, I wrote APIs. I made calls and file order according to APIs
