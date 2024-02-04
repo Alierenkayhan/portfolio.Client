@@ -16,8 +16,8 @@ export default function Article()
         {
             try
             {
-                const mediumData = await api.medium;
-                const bloggerData = await api.blogger;
+                const mediumData = await api.fetchDataFromMedium();
+                const bloggerData = await api.fetchDataFromBlogger();
 
                 const combinedData = [
                     ...mediumData.items.map(item => ({ ...item, type: 'medium' })),

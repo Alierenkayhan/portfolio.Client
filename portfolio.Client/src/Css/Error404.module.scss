@@ -1,0 +1,39 @@
+// Error404.module.scss
+
+.errorContainer {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.errorImage {
+    margin-bottom: 20px;
+
+    img {
+        max-width: 30%;
+        height: auto;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+.goHomeButton {
+    margin-top: 2%;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+}

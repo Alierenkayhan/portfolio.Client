@@ -1,0 +1,52 @@
+@import "./variables.modules.scss";
+
+
+$container-width: 300px;
+$box-shadow-color: rgba(0, 0, 0, 0.1);
+$border-radius: 8px;
+$primary-color: #007bff;
+$hover-color: #0056b3;
+
+.container {
+    width: $container-width;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px $box-shadow-color;
+    border-radius: $border-radius;
+    background-color: #fff;
+    margin-top: 20%;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: $primary-color;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: $border-radius;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px;
+            border-radius: $border-radius;
+            border: none;
+            background-color: $primary-color;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: $hover-color;
+            }
+        }
+    }
+}

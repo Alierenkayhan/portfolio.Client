@@ -13,7 +13,7 @@ export default function Portfolio()
         {
             try
             {
-                const githubData = await api.github;
+                const githubData = await api.fetchDataFromGitHub();
                 setGithubProjects(githubData);
             } catch (error)
             {
@@ -29,7 +29,7 @@ export default function Portfolio()
             <Grid container display={'flex'} justifyContent={'center'}>
                 {githubProjects.map((project, index) => (
                     <Grid item xs={12} md={6} key={index}>
-                        <PortfolioBlock image={porjects_image} source={project.html_url} title={project.name} />
+                        <PortfolioBlock image={porjects_image} source={project.html_url} title={project.name} tags={project.language} />
                     </Grid>
                 ))}
             </Grid>

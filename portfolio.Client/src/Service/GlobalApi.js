@@ -12,6 +12,7 @@ const fetchDataFromGitHub = async () =>
         throw error;
     }
 };
+
 const fetchDataFromBlogger = async () =>
 {
     try
@@ -24,6 +25,7 @@ const fetchDataFromBlogger = async () =>
         throw error;
     }
 };
+
 const fetchDataFromMedium = async () =>
 {
     try
@@ -155,14 +157,24 @@ const fetchDataFromServerContent = async () =>
     }
 };
 
-const github = fetchDataFromGitHub();
-const blogger = fetchDataFromBlogger();
-const medium = fetchDataFromMedium();
+
+const fetchDataFromServerAuth = async () =>
+{
+    try
+    {
+        const response = await axios.post(process.env.REACT_APP_BASE_URL + "User");
+        return response.data;
+    } catch (error)
+    {
+        console.error("Error fetching data:", error);
+        throw error;
+    }
+};
 
 const api = {
-    github,
-    blogger,
-    medium,
+    fetchDataFromGitHub,
+    fetchDataFromBlogger,
+    fetchDataFromMedium,
     fetchDataFromServerAbout,
     fetchDataFromServerMiniBio,
     fetchDataFromServerHobbies,
@@ -171,7 +183,8 @@ const api = {
     fetchDataFromServerEducation,
     fetchDataFromServerVoluntarily,
     fetchDataFromServerRecommendations,
-    fetchDataFromServerContent
+    fetchDataFromServerContent,
+    fetchDataFromServerAuth
 };
 
 export default api;
